@@ -21,6 +21,16 @@
   // string
   const str: string = "hello";
 
-  //boolean
+  // boolean
   const boal: boolean = true; // true, false
+
+  // undefined
+  let name: undefined; // 💩
+  let age: number | undefined;
+  age = undefined;
+  age = 1;
+
+  // null
+  let person: null; // 💩
+  let person2: string | null;
 }
