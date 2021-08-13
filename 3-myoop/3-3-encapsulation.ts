@@ -27,7 +27,7 @@
       this.coffeeBeans += beans;
     }
 
-    static makeCoffee(shots: number): CoffeeCup {
+    makeCoffee(shots: number): CoffeeCup {
       if (this.coffeeBeans < shots * CoffeeMaker.BEANS_GRAMM_PER_SHOT) {
         throw new Error("Not enoungh coffee beans!");
       }
@@ -41,4 +41,26 @@
 
   const maker = CoffeeMaker.makeMachine(32);
   maker.fillCoffeeBeans(3);
+
+  class User {
+    get fullName(): string {
+      return `${this.firstName} ${this.lastName}`;
+    }
+    private internalAge = 4;
+    get age(): number {
+      return this.internalAge;
+    }
+    set age(num: number) {
+      if (num < 0) {
+        console.log("age는 양수여야 합니다.");
+      }
+      this.internalAge = num;
+    }
+    constructor(public firstName: string, private lastName: string) {}
+  }
+  const user = new User("Steve", "Jobs");
+  user.age = 6;
+  console.log(user.fullName);
+  user.firstName = "Ellie";
+  console.log(user.fullName);
 }
