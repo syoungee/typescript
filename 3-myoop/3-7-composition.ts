@@ -114,7 +114,7 @@
   }
 
   class NoSugar implements SugarProvider {
-    addSugar(cup: CoffeeMachine): CoffeeCup {
+    addSugar(cup: CoffeeCup): CoffeeCup {
       return cup;
     }
   }
