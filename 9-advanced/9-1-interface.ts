@@ -49,3 +49,11 @@ type Person = {
 type Name = Person["name"]; // string
 type NumberType = number;
 type Direction = "left" | "right"; // union type은 type만 가능(interface 불가)
+
+// interface? 어떤 규격 사항
+// API 계약서와 마찬가지
+// 규격을 통해 구현이 된다면 type보다 interface를 사용하는 것이 맞다.
+
+// Types? 어떠한 데이터를 담을 때 데이터의 타입을 결정하는 것
+// ex) type Position {x:number; y:number;}
+// type alias가 강력해지고 있다!
